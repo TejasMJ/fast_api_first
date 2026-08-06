@@ -13,6 +13,11 @@ def read_root():
 def read_root():
     return {"Hello": "From FastAPI"}
 
+@app.get("/fast")
+def read_root():
+    test_varable = "Hello from FastAPI"
+    return test_varable
+
 @app.post("/items/")
 def create_item(item: str):
     items.append(item)
