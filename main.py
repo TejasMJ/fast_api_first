@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 
 app = FastAPI()
 
@@ -13,10 +14,9 @@ def read_root():
 def read_root():
     return {"Hello": "From FastAPI"}
 
-@app.get("/fast")
+@app.get("/fast", response_class=HTMLResponse)
 def read_root():
-    test_varable = "Hello from FastAPI"
-    return f"<h1>{test_varable}</h1>"
+    return "<h1>test_variable</h1>"
 
 @app.post("/items/")
 def create_item(item: str):
