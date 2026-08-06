@@ -5,11 +5,6 @@ app = FastAPI()
 
 items = []
 
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
 @app.get("/fastapi")
 def read_root():
     return {"Hello": "From FastAPI"}
