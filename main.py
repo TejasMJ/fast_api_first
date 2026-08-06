@@ -16,7 +16,7 @@ def read_root():
 @app.get("/fast")
 def read_root():
     test_varable = "Hello from FastAPI"
-    return test_varable
+    return f"<h1>{test_varable}</h1>"
 
 @app.post("/items/")
 def create_item(item: str):
